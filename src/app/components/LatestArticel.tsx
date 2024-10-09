@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const articles = [
   {
     id: 1,
     image:
-      "https://cdn.undiksha.ac.id/wp-content/uploads/sites/27/2023/07/04152245/blog-SEO-1200x650.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLl3sjHljc8B5vEJTyMOzx5tFITHf0fdsYCg&s",
     date: "15 Oct 2024",
     categories: ["Guide"],
     title: "Cara Mengoptimalkan SEO untuk Website Anda",
@@ -74,10 +75,12 @@ const LatestArticles = () => {
                   key={article.id}
                   className="block bg-transparent rounded-lg overflow-hidden border border-gray-200"
                 >
-                  <img
+                  <Image
                     src={article.image}
                     alt={article.title}
                     className="w-full h-56 object-cover object-center rounded-md"
+                    width={1200} // Use the actual width of the image
+                    height={650} // Use the actual height of the image
                   />
                   <div className="p-4 rounded-md">
                     <div className="flex flex-wrap items-center mb-2">
@@ -102,10 +105,12 @@ const LatestArticles = () => {
                       {article.description}
                     </p>
                     <div className="flex items-center">
-                      <img
+                      <Image
                         src="/favicon.ico"
                         alt={article.author}
                         className="w-8 h-8 rounded-full mr-2"
+                        width={32} // Favicon width
+                        height={32} // Favicon height
                       />
                       <span className="text-sm text-gray-700">
                         {article.author}
