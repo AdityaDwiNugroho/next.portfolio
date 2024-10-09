@@ -2,7 +2,11 @@
 const nextConfig = {
   trailingSlash: true,
   images: {
-    domains: ["external-content.duckduckgo.com", "encrypted-tbn0.gstatic.com"],
+    domains: ["encrypted-tbn0.gstatic.com"],
+  },
+  reactStrictMode: true,
+  env: {
+    REACT_DEV_TOOLS: process.env.NODE_ENV !== "production" ? "true" : "false",
   },
 };
 
