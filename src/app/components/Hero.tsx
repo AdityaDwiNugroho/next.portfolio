@@ -15,8 +15,9 @@ const Hero = () => {
                 href="/blogs"
                 className="outline outline-1 outline-indigo-500 bg-blue-500 text-white px-8 py-3 hover:bg-blue-400 rounded-full text-lg sm:text-xl sm:mr-6 mb-2 sm:mb-0"
               >
-                What's new
+                What{"'s"} new
               </Link>
+
               <Link
                 href="/blogs"
                 className="text-blue-600 hover:text-blue-400 text-lg sm:text-xl flex items-center"
