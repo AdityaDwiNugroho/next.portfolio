@@ -1,3 +1,5 @@
+"use client";
+
 import "./globals.css";
 import Hero from "./components/Hero";
 import { useEffect } from "react";
