@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import Head from "next/head";
 
 interface LayoutProps {
@@ -12,7 +11,6 @@ export default function Layout({ children }: LayoutProps) {
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body>
-        <Navbar />
         <main>{children}</main>
       </body>
     </html>

@@ -72,7 +72,7 @@ const LatestArticles = () => {
                 <Link
                   href={`/article/${formattedLink}`}
                   key={article.id}
-                  className="block bg-transparent rounded-lg overflow-hidden border border-gray-200"
+                  className="block bg-transparent rounded-lg overflow-hidden "
                 >
                   <Image
                     src={article.image}
