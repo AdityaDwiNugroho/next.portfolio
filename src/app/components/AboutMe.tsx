@@ -18,17 +18,17 @@ const AboutMeSection = () => {
         <div className="w-full md:w-2/3">
           <h2 className="text-3xl font-bold mb-4">Who Am I?</h2>
           <p className="mb-4">
-            I'm Aditya Dwi Nugroho – a web developer, problem-solver, and
+            I{"'m"} Aditya Dwi Nugroho – a web developer, problem-solver, and
             lifelong learner. My passion lies in turning ideas into functional,
             beautiful websites and applications. With experience in Vue.js,
             Nuxt.js, Vuetify, and Tailwind CSS, I focus on creating
             user-centered, responsive designs that deliver results.
           </p>
           <p className="mb-4">
-            When I'm not coding, I'm usually diving into the latest tech trends,
-            collaborating on exciting projects, or brainstorming my next big
-            idea. I believe in the power of technology to make lives easier, and
-            I'm always eager to bring innovative solutions to life.
+            When I{"'m"} not coding, I{"'m"} usually diving into the latest tech
+            trends, collaborating on exciting projects, or brainstorming my next
+            big idea. I believe in the power of technology to make lives easier,
+            and I{"'m"} always eager to bring innovative solutions to life.
           </p>
 
           <a
