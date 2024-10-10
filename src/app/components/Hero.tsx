@@ -1,19 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import mascot from "../assets/img/mascot1.png";
 import Footer from "./Footer";
+import IntroSection from "./IntroSection";
+import AboutMeSection from "./AboutMe";
+import QuickSearch from "./QuickSearch";
+import { FiSearch } from "react-icons/fi";
 import LatestArticles from "./LatestArticel";
 
-const Hero = () => {
+const Hero: React.FC = () => {
+  const [isQuickSearchOpen, setIsQuickSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.ctrlKey || event.metaKey) && event.key === "f") {
+        event.preventDefault();
+        setIsQuickSearchOpen(true);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  const handleQuickSearchOpen = () => {
+    setIsQuickSearchOpen(true);
+  };
+
+  const handleQuickSearchClose = () => {
+    setIsQuickSearchOpen(false);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col">
+      <QuickSearch
+        isOpen={isQuickSearchOpen}
+        onClose={handleQuickSearchClose}
+      />
       <main className="container mx-auto px-4 py-8 flex-grow flex items-center">
         <div className="flex flex-col lg:flex-row items-center justify-between w-full">
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
             <nav className="flex flex-col sm:flex-row items-start sm:items-center mb-10 space-y-4 sm:space-y-0">
               <Link
                 href="/blogs"
-                className="outline outline-1 outline-indigo-500 bg-blue-500 text-white px-8 py-3 hover:bg-blue-400 rounded-full text-lg sm:text-xl sm:mr-6 mb-2 sm:mb-0"
+                className="outline outline-1 outline-indigo-500 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full text-lg sm:text-xl sm:mr-6 mb-2 sm:mb-0  transition duration-300 group"
               >
                 What{"'s"} new
               </Link>
@@ -35,20 +65,22 @@ const Hero = () => {
               resources to develop your web projects.
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0">
-              <button className="bg-blue-500 text-white px-10 py-4 rounded-full hover:bg-blue-600 transition duration-300 text-lg sm:text-xl sm:mr-6 flex items-center">
+              <button className="bg-blue-500 hover:bg-blue-600 text-white px-10 py-4 rounded-full transition duration-300 group text-lg sm:text-xl sm:mr-6 flex items-center">
                 <span className="mdi mdi-rocket-outline transform rotate-45 mr-2"></span>
                 Projects
               </button>
-              <div className="relative w-full sm:w-auto">
-                <input
-                  type="text"
-                  placeholder="Quick search..."
-                  className="w-full sm:w-auto pl-6 pr-12 py-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
-                />
-                <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm">
-                  CTRL + K
-                </span>
-              </div>
+              <button
+                onClick={handleQuickSearchOpen}
+                className="flex w-full sm:w-auto bg-white text-left"
+              >
+                <div className="flex items-center pl-4 pr-12 py-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg">
+                  <FiSearch className="text-gray-400 mr-2" />
+                  <span className="text-gray-400 text-md mr-4">
+                    Quick search...
+                  </span>
+                  <span className=" text-gray-400 text-sm">CTRL + F</span>
+                </div>
+              </button>
             </div>
           </div>
           <div className="w-full lg:w-1/2 mt-12 lg:mt-0">
@@ -63,6 +95,8 @@ const Hero = () => {
           </div>
         </div>
       </main>
+      <AboutMeSection />
+      <IntroSection />
       <LatestArticles />
       <Footer />
     </div>
