@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const articles = [
@@ -122,9 +121,24 @@ const LatestArticles = () => {
             })}
           </div>
           <div className="mt-6 flex justify-end">
-            <button className="flex items-center text-white hover:bg-blue-400 outline outline-1 outline-indigo-500 bg-blue-500 px-6 py-2 rounded-full transition-transform duration-200">
-              Show more
-              <ArrowRight className="ml-1 w-4 h-4 transition-transform duration-200 hover:translate-x-1" />
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300 group">
+              <span className="flex items-center">
+                Show more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-2 transform transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </span>
             </button>
           </div>
         </div>
