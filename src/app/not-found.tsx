@@ -5,7 +5,7 @@ const NotFound = () => {
     <div style={{ textAlign: "center", padding: "50px" }}>
       <h1>Oops! Page Not Found</h1>
       <p>
-        The page you'{"'r"}e looking for doesn{"'t"} exist.
+        The page you{"'re"} looking for doesn{"'t"} exist.
       </p>
       <Link href="/" style={{ color: "blue", textDecoration: "underline" }}>
         Go back to the homepage
