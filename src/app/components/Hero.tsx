@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import mascot from "../assets/img/mascot1.png";
 import Footer from "./Footer";
 import IntroSection from "./IntroSection";
 import AboutMeSection from "./AboutMe";
