@@ -2,7 +2,7 @@ import React from "react";
 
 const IntroSection = () => {
   return (
-    <div className="text-center py-16 px-4">
+    <div className="text-center py-4 px-4">
       <h2 className="text-4xl font-bold mb-4">
         Showcase Your Creativity.
         <br /> Discover My Portfolio Today.

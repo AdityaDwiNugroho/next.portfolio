@@ -12,7 +12,7 @@ const AboutMeSection = () => {
             alt="Aditya Dwi Nugroho"
             width={400}
             height={400}
-            className="rounded-lg"
+            className="rounded-lg cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
           />
         </div>
         <div className="w-full md:w-2/3">
