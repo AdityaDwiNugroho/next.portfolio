@@ -10,7 +10,8 @@ const Footer = () => {
             href="https://github.com/AdityaDwiNugroho"
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-3"
+            className="mx-3 text-zinc-600 hover:text-zinc-800"
+            title="Github"
           >
             <Github size={24} />
           </a>
@@ -18,15 +19,17 @@ const Footer = () => {
             href="https://instagram.com/allen.adityadn"
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-3"
+            className="mx-3 text-zinc-600 hover:text-zinc-800"
+            title="Instagram"
           >
             <Instagram size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/aditya-dwi-nugroho-75057827a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-3"
+            className="mx-3 text-zinc-600 hover:text-zinc-800"
+            title="LinkedIn"
           >
             <Linkedin size={24} />
           </a>

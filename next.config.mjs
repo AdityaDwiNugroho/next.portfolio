@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
+  productionBrowserSourceMaps: false,
   images: {
     domains: ["encrypted-tbn0.gstatic.com"],
   },

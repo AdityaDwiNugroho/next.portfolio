@@ -3,6 +3,7 @@
 import "./globals.css";
 import Hero from "./components/Hero";
 import { useEffect } from "react";
+import "@mdi/font/css/materialdesignicons.css";
 
 export default function Home() {
   useEffect(() => {

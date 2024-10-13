@@ -8,6 +8,7 @@ import QuickSearch from "./QuickSearch";
 import { FiSearch } from "react-icons/fi";
 import LatestArticles from "./LatestArticel";
 import Navbar from "./Navbar";
+import EnhancedMascot from "./Mascot";
 
 const Hero: React.FC = () => {
   const [isQuickSearchOpen, setIsQuickSearchOpen] = useState(false);
@@ -89,14 +90,7 @@ const Hero: React.FC = () => {
               </div>
             </div>
             <div className="w-full lg:w-1/2 mt-12 lg:mt-0">
-              <div
-                className="mascot-glow bg-no-repeat bg-center rounded-lg"
-                style={{
-                  backgroundImage: `url(${mascot.src})`,
-                  height: "1024px",
-                  width: "100%",
-                }}
-              />
+              <EnhancedMascot />
             </div>
           </div>
         </main>
