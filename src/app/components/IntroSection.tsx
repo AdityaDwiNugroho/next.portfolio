@@ -12,7 +12,10 @@ const IntroSection = () => {
         deliver results.
       </p>
       <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300 group">
-        <span className="flex items-center">
+        <span
+          className="flex items-center"
+          onClick={() => (window.location.href = "/projects")}
+        >
           Explore my work
           <svg
             xmlns="http://www.w3.org/2000/svg"

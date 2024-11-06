@@ -10,7 +10,7 @@ export default function Home() {
     if (
       process.env.NODE_ENV !== "production" &&
       process.env.NEXT_PUBLIC_REACT_DEV_TOOLS === "true"
-    ) {
+    ) { 
       console.log("React DevTools are enabled");
     }
   }, []);
